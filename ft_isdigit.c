@@ -6,15 +6,15 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 02:51:14 by joshenri          #+#    #+#             */
-/*   Updated: 2021/08/21 02:56:20 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:19:40 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
 	if (!(c >= '0' && c <= '9'))
-	{
 		return (0);
-	}
 	return (1);
 }

@@ -6,15 +6,15 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 03:32:33 by joshenri          #+#    #+#             */
-/*   Updated: 2021/08/21 03:39:02 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:22:08 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isprint(int c)
 {
 	if (!(c >= 32 && c <= 126))
-	{
 		return (0);
-	}
 	return (1);
 }

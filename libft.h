@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/21 05:59:14 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/12 15:12:17 by joshenri         ###   ########.fr       */
+/*   Created: 2021/09/11 18:21:10 by joshenri          #+#    #+#             */
+/*   Updated: 2021/09/12 15:13:13 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_bzero(void *b, size_t len)
-{
-	char	*mem;
+# include <stdlib.h>
 
-	mem = b;
-	while (len != 0)
-	{
-		*mem = 0;
-		mem++;
-		len--;
-	}
-}
+int	ft_isdigit(int c);
+
+#endif

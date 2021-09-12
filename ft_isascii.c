@@ -6,15 +6,15 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 03:10:40 by joshenri          #+#    #+#             */
-/*   Updated: 2021/08/21 03:28:42 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:19:00 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isascii(int c)
 {
 	if (!(c >= 0 && c <= 127))
-	{
 		return (0);
-	}
-	return (2);
+	return (1);
 }

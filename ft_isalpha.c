@@ -6,15 +6,15 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 01:57:47 by joshenri          #+#    #+#             */
-/*   Updated: 2021/08/21 02:50:39 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/12 15:17:18 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
 	if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')))
-	{
 		return (0);
-	}
 	return (1);
 }
