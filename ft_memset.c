@@ -6,23 +6,23 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 05:05:33 by joshenri          #+#    #+#             */
-/*   Updated: 2021/08/21 05:57:42 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/13 18:33:47 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t len)
 {
-	size_t			i;
-	unsigned char	*mem;
+	size_t	i;
+	char	*destcpy;
 
 	i = 0;
-	mem = dest;
+	destcpy = (char *)dest;
 	while (i < len)
 	{
-		mem[i] = (unsigned char) c;
+		destcpy[i] = (char)c;
 		i++;
 	}
-	return (mem);
+	return (dest);
 }
