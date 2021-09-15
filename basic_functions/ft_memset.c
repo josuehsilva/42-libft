@@ -6,11 +6,11 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 05:05:33 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/13 18:33:47 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 01:23:41 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memset(void *dest, int c, size_t len)
 {

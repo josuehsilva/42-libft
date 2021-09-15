@@ -6,11 +6,11 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 15:56:48 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/12 16:40:44 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 01:48:19 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_memcmp(const void *b1, const void *b2, size_t len)
 {
