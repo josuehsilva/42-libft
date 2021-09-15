@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/11 18:21:10 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/14 19:49:28 by joshenri         ###   ########.fr       */
+/*   Created: 2021/09/14 19:08:57 by joshenri          #+#    #+#             */
+/*   Updated: 2021/09/14 20:01:31 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdlib.h>
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	size_t	ltlen;
 
-int	ft_isdigit(int c);
-
-size_t	ft_strlen(const char *s);
-
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-
-int	ft_strncmp(const char *s1, const char *s2, size_t len);
-
-#endif
+	ltlen = ft_strlen(little);
+	if (!(*little))
+		return ((char *)big);
+	while (*big && (ltlen <= len--))
+	{
+		if (ft_strncmp(*big, *little, ltlen) == 0)
+			return ((char *)big);
+		*big++;
+	}
+	return (0);
+}

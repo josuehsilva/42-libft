@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/13 18:36:10 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/13 20:36:24 by joshenri         ###   ########.fr       */
+/*   Created: 2021/09/14 20:01:41 by joshenri          #+#    #+#             */
+/*   Updated: 2021/09/14 21:38:51 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char * restrict dst, const char * restrict src,
-size_t dstsize)
+char	*ft_strrchr(const char *s, int c)
 {
+	int	slen;
 
+	slen = ft_strlen(s);
+	while (slen >= 0)
+	{
+		if(((char *)s)[slen] == (char)c)
+			return ((char *)s + slen);
+		slen--;
+	}
+	return (0);
 }
