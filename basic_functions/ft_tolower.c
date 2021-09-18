@@ -6,13 +6,13 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 00:08:24 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/15 00:29:02 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 03:02:40 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if(c >= 65 && c <= 90)
+	if (c >= 65 && c <= 90)
 		c = c + 32;
 	return (c);
 }

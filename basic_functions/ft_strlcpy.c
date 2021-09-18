@@ -6,7 +6,7 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/14 15:10:24 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/14 15:33:20 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/16 00:31:18 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	lensrc = ft_strlen(src);
 	if (dstsize != 0)
 	{
-		while (*src && i < (dstsize - 1))
+		while (src[i] != '\0' && i < (dstsize - 1))
 		{
 			dst[i] = src[i];
 			i++;

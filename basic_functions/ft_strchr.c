@@ -6,20 +6,17 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 16:53:36 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/13 18:34:36 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 02:54:56 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		if(((char *)s)[i] == (char)c)
-			return ((char *)s + i);
-		i++;
-	}
+	while (*s != '\0' && c != *s)
+		s++;
+	if (c == *s)
+		return ((char *)s);
 	return (0);
 }

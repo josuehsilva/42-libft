@@ -6,11 +6,11 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 05:59:14 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/14 23:58:39 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 02:13:12 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 void	ft_bzero(void *b, size_t len)
 {

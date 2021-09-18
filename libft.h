@@ -6,7 +6,7 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:21:10 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/15 00:10:57 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/18 05:08:03 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 /*Basic Functions*/
 
@@ -59,9 +60,23 @@ char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 char	*ft_strrchr(const char *s, int c);
 
-int		tolower(int c);
+int		ft_tolower(int c);
 
-int		toupper(int c);
+int		ft_toupper(int c);
 
 /* Additional Functions */
+
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_strjoin(char const *s1, char const *s2);
+
+char	*ft_strtrim(char const *s1, char const *set);
+
+void	ft_putchar_fd(char c, int fd);
+
+void	ft_putstr_fd(char *s, int fd);
+
+void	ft_putendl_fd(char *s, int fd);
+
+void	ft_putnbr_fd(int n, int fd);
 #endif

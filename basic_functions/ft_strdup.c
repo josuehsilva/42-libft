@@ -6,11 +6,11 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 00:06:07 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/15 01:57:10 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/15 02:13:57 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 char	*ft_strdup(const char *str)
 {

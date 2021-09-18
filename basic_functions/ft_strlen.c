@@ -6,11 +6,11 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/21 03:39:46 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/15 01:42:14 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/17 01:02:27 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
