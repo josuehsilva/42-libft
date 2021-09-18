@@ -6,7 +6,7 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:21:10 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/18 05:08:03 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/18 18:51:22 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-/*Basic Functions*/
+/*
+* Basic Functions
+*/
 
 int		ft_atoi(const char *str);
 
@@ -64,8 +66,9 @@ int		ft_tolower(int c);
 
 int		ft_toupper(int c);
 
-/* Additional Functions */
-
+/*
+* Additional Functions
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 char	*ft_strjoin(char const *s1, char const *s2);
@@ -79,4 +82,12 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 
 void	ft_putnbr_fd(int n, int fd);
+
+char	*ft_itoa(int n);
+
+char	**ft_split(char const *s, char c);
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 #endif
