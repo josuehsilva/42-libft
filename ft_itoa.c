@@ -6,36 +6,51 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/12 15:22:52 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/18 18:13:13 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/19 03:17:33 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_countdigits(int n)
+{
+	int	c;
+
+	c = 1;
+	n = n / 10;
+	while (n)
+	{
+		n = n / 10;
+		c++;
+	}
+	return (c);
+}
+
 char	*ft_itoa(int n)
 {
-	char	*str;
+	long int	longn;
+	int			is_neg;
+	int			len;
+	char		*str;
 
-	str = (char *)malloc(sizeof(char) * 2);
-	if (!str)
-		return (0);
-	if (n == -2147483648)
-	{
-		str = ft_strdup("-2147483648");
-		return (str);
-	}
+	longn = n;
+	is_neg = 0;
 	if (n < 0)
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(n * -1));
+		longn = longn * (-1);
+		is_neg = 1;
 	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
+	len = ft_countdigits(longn);
+	str = malloc(is_neg + len + 1);
+	if (!str)
+		return (0);
+	*str = '-';
+	str[is_neg + len] = '\0';
+	while (len)
 	{
-		str[0] = n + '0';
-		str[1] = '\0';
+		str[is_neg + len - 1] = longn % 10 + '0';
+		longn = longn / 10;
+		len--;
 	}
 	return (str);
 }

@@ -1,34 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/16 00:44:04 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/17 01:02:29 by joshenri         ###   ########.fr       */
+/*   Created: 2021/09/13 15:26:29 by joshenri          #+#    #+#             */
+/*   Updated: 2021/09/18 22:20:23 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	size_t	j;
-	char	*substr;
+	size_t		i;
+	const char	*source;
+	char		*dstcpy;
 
-	j = 0;
-	i = start;
-	substr = malloc(len + 1);
-	if (!substr || !s)
+	i = 0;
+	if (!dst && !src)
 		return (0);
-	while (s[j] != '\0' && j < len)
+	source = (const char *)src;
+	dstcpy = (char *)dst;
+	while (i < len)
 	{
-		substr[j] = s[i];
-		j++;
+		dstcpy[i] = source[i];
 		i++;
 	}
-	substr[j] = '\0';
-	return (substr);
+	return (dst);
 }

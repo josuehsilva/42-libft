@@ -1,22 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/18 04:39:45 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/18 04:43:59 by joshenri         ###   ########.fr       */
+/*   Created: 2021/09/17 01:32:25 by joshenri          #+#    #+#             */
+/*   Updated: 2021/09/18 23:08:22 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	i;
+	size_t	i;
+	size_t	j;
+	size_t	k;
+	char	*trimmed;
 
+	if (!s1 || !set)
+		return (0);
+	j = 0;
+	k = ft_strlen(s1);
+	while (s1[j] && ft_strchr(set, s1[j]))
+		j++;
+	while (k > j && ft_strchr(set, s1[k - 1]))
+		k--;
+	trimmed = (char *)malloc((k - j + 1));
+	if (!trimmed)
+		return (0);
 	i = 0;
-	while (s[i] != '\0')
-		write(fd, &s[i++], 1);
+	while (j < k)
+		trimmed[i++] = s1[j++];
+	trimmed[i] = '\0';
+	return (trimmed);
 }
