@@ -9,22 +9,26 @@ ft_putnbr_fd.c ft_itoa.c ft_strmapi.c ft_striteri.c ft_split.c
 
 CC = gcc
 
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
 
 OBJ := $(SRC:.c=.o)
 
-all:    $(NAME)
+RM = rm -rf
 
-$(NAME):    $(OBJ)
+all: $(NAME)
+
+$(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
+$(OBJ): $(SRC)
+	$(CC) $(CFLAGS) -c $(FILES)
+
 clean:
-	rm -rf *.o
-	rm -rf ./a.out
+	$(RM) $(OBJ)
 
-fclean:    clean
-	rm -rf $(NAME)
+fclean: clean
+	$(RM) $(NAME)
 
-re:    fclean all
+re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: all clean fclean re
