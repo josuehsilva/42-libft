@@ -6,7 +6,7 @@
 /*   By: joshenri <joshenri@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/11 18:23:32 by joshenri          #+#    #+#             */
-/*   Updated: 2021/09/12 15:08:30 by joshenri         ###   ########.fr       */
+/*   Updated: 2021/09/30 08:25:14 by joshenri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_atoi(const char *str)
 	while (str[c] >= '0' && str[c] <= '9')
 	{
 		result = (result * 10);
-		result += (str[c] - 48);
+		result += (str[c] - '0');
 		c++;
 	}
 	return (result * n);
