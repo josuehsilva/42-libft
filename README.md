@@ -19,7 +19,7 @@
   Contact
 </h2>
 <p align="center">
-  This is my libft project from the 42 cursus, need help: joshenri@student.42sp.org.br
+  This is my libft project from 42 cursus, need help: joshenri@student.42sp.org.br
 </p>
 
 <p align="center">
