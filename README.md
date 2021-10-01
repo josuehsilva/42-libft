@@ -1,13 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/github/contributors/josuehsilva/libft?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/forks/josuehsilva/libft?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/stars/josuehsilva/libft?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/issues/josuehsilva/libft?style=for-the-badge"/>
-  <img src="https://img.shields.io/github/license/josuehsilva/libft?style=for-the-badge"/>
-</p>
-
-<p align="center">
-  <img src="https://badge42.herokuapp.com/api/stats/joshenri?privacyEmail=true"/>
+  <img src="https://badge42.herokuapp.com/api/stats/joshenri?privacyEmail=true?darkmode=true&cursus=42cursus"/>
 </p>
 <h3 align="center">
   LIBFT
