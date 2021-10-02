@@ -5,7 +5,7 @@
   LIBFT
 </h3>
 <p align="center">
-  This project aims to redo a C library of usual functions that can be used in the next projects of the course.
+  This is the first project of 42cursus. This project aims to redo a C library of usual functions that can be used in the next projects of the course.
 </p>
 
 <h2 align="center">
